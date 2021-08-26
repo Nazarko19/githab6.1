@@ -7,8 +7,8 @@ export default function PostDetails(props) {
   return (
       <div>
 
-          <h2>{state.id}-{state.title}</h2>
-          <ul><li>{state.body}</li></ul>
+            <h2>{state.id}-{state.title}</h2>
+             <ul><li>{state.body}</li></ul>
 
       </div>
   )
