@@ -1,8 +1,8 @@
 
 
 export default function PostDetails(props) {
-
-  let {location: {state}} = props
+    console.log(props);
+    let {location: {state}} = props
 
   return (
       <div>
