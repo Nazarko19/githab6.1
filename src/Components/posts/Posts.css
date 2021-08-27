@@ -1,0 +1,17 @@
+.wrapPosts{
+margin-top: 100px;
+}
+
+.posts{
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+.post{
+    width: 10%;
+}
+
+.postDetails{
+text-align: center;
+}

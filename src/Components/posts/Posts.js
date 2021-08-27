@@ -3,6 +3,7 @@ import {getPosts} from "../../servises/users.servis";
 import Post from "./Post";
 import {Route} from "react-router-dom";
 import PostDetails from "./PostDetails";
+import './Posts.css'
 
 export default function Posts(props) {
     let {match:{url}}=props
@@ -11,13 +12,19 @@ export default function Posts(props) {
         getPosts().then(value => setPosts([...value]))
     },[])
   return (
-    <div>
-        {
-            posts.map(value => <Post key={value.key} item={value} />)
-        }
+    <div className={'wrapPosts'}>
+        <div className={'posts'}>
+            {
+                posts.map(value => <Post key={value.key} item={value} />)
+            }
+        </div>
+
+
+        <div className={'postDetails'}>
         <Route path={`${url}/:id`} render={(props) => {
             return <PostDetails {...props}/>
         }}/>
+        </div>
 
     </div>
   );

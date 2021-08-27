@@ -8,16 +8,19 @@ import {
 
 } from "react-router-dom";
 import Posts from "./Components/posts/Posts";
-
+import './App.css'
 
 
 export default function App() {
   return (
        <Router>
            <div>
+
+               <div className={'link'}>
                <Link to={'/'}>no</Link>
                <Link to={'/users'}>getUsers</Link>
                <Link to={'/posts'}>getPost</Link>
+               </div>
 
                      <div>
                          <Route  path={'/users'} component={Users}/>

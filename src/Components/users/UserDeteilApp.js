@@ -20,8 +20,8 @@ export default function UserDeteilApp(props) {
     return (
         <div>
 
-            <h2>{user.name}-{user.username}</h2>
-            <h3>{user.email}</h3>
+            <h4>{user.name}-{user.username}</h4>
+            <h4>{user.email}</h4>
             {
                 user.address && <>
                     <ul>Address:
@@ -30,9 +30,17 @@ export default function UserDeteilApp(props) {
                         <li>{user.address.city}</li>
                         <li>{user.address.zipcode}</li>
                     </ul>
-                    <h2>{user.address.geo.lat}</h2>
-                    <h2>{user.address.geo.lng}</h2></>
+                    <ul>>Geo:
+                    <li>{user.address.geo.lat}</li>
+                    <li>{user.address.geo.lng}</li>
+                </ul></>
             }
+            <h4>{user.phone}</h4>
+            <h4>{user.website}</h4>
+            {user.company && <> <ul>Company:
+            <li>{user.company.name}</li>
+            <li>{user.company.catchPhrase}</li>
+            <li>{user.company.bs}</li></ul> </>}
 
 
         </div>

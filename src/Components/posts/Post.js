@@ -10,9 +10,9 @@ import {
 
 export default function Post({item}) {
   return (
-    <div>
+    <div className={'post'}>
 
-      {item.title} - <Link to={{pathname:`/posts/${item.id}`,state:item}}>details post</Link>
+      {item.title} <br/> <div className={'linkPost'}><Link to={{pathname:`/posts/${item.id}`,state:item}}>details post</Link></div>
 
     </div>
   );
